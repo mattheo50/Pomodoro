@@ -4,7 +4,7 @@
 
 The project was an exercise from my BUT informatique of javascript, html and CSS where we have to develop a web application of a pomodoro, a system where you have to set up a work time and a break time and start a Chrono for working and after his time's up, the Pomodoro starts the break Chrono.
 
-You can use here my [Pomodoro] (https://mattheo50.github.io/Pomodoro/)
+You can use here my [Pomodoro](https://mattheo50.github.io/Pomodoro/)
 
 ## How to use it
 
