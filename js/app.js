@@ -1,16 +1,39 @@
+timeStorage = localStorage;
+
 let stopInterval;
+
 let seconds = 0;
+
 let minuts = 25;
+
 let breakTime = 5;
+
 let workTime = 25;
+
 workBoolean = true;
+
 window.onload = (event) => {
-    document.getElementById("timer").textContent = "25:00";
+    if(timeStorage!=null){
+        minuts = parseInt(localStorage.getItem("timeWork"));
+        workTime = parseInt(localStorage.getItem("timeWork"));
+        breakTime = parseInt(localStorage.getItem("timeBreak"));
+        document.getElementById("textBreakInput").textContent = localStorage.getItem("timeBreak");
+        document.getElementById("textWorkInput").textContent = localStorage.getItem("timeWork");
+        document.querySelector("#rangeWork").value = localStorage.getItem("timeWork");
+        document.querySelector("#rangeBreak").value = localStorage.getItem("timeBreak");
+        displayTime();
+    }else{
+        document.getElementById("timer").textContent = "25:00";
+    }
 };
+
 //Add input for v2
+
 const workInput = document.querySelector("#rangeWork");
 const breakInput = document.querySelector("#rangeBreak");
+
 //Event for changing the break time
+
 breakInput.addEventListener("input", (event) => {
     var breakInputValue = event.target.value;
     if (breakInputValue < 10) {
@@ -20,7 +43,9 @@ breakInput.addEventListener("input", (event) => {
     }
     breakTime = breakInputValue;
 });
+
 //Event for changing the work time
+
 workInput.addEventListener("input", (event) => {
     var workInputValue = event.target.value;
     if (workInputValue < 10) {
@@ -32,7 +57,9 @@ workInput.addEventListener("input", (event) => {
     minuts = workInputValue;
     displayTime();
 });
+
 //display the time on the chrono
+
 function displayTime() {
     if (seconds < 10) {
         if (minuts < 10) {
@@ -46,8 +73,12 @@ function displayTime() {
         document.getElementById("timer").textContent = `${minuts}:${seconds}`;
     }
 }
+
 //Start the timer when the button start is pressed
+
 function startTimer() {
+    localStorage.setItem("timeWork",workTime);
+    localStorage.setItem("timeBreak",breakTime);
     workInput.disabled = true;
     breakInput.disabled = true;
     document.getElementById("statut").textContent = "Work";
@@ -56,7 +87,9 @@ function startTimer() {
     displayTime();
     setInterval(decreaseTime, 1000);
 }
+
 //Used to decrease the time from the chrono
+
 function decreaseTime() {
     if (seconds > 0) {
         seconds = seconds - 1;
@@ -80,7 +113,9 @@ function decreaseTime() {
     }
     displayTime();
 }
+
 //reload the windows
+
 function reset() {
     location.reload();
 }
