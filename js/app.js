@@ -13,7 +13,7 @@ let workTime = 25;
 workBoolean = true;
 
 window.onload = (event) => {
-    if(timeStorage!=null){
+    if(timeStorage.getItem("timeWork")!=null){
         minuts = parseInt(localStorage.getItem("timeWork"));
         workTime = parseInt(localStorage.getItem("timeWork"));
         breakTime = parseInt(localStorage.getItem("timeBreak"));
