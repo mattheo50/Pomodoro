@@ -36,11 +36,7 @@ const breakInput = document.querySelector("#rangeBreak");
 
 breakInput.addEventListener("input", (event) => {
     var breakInputValue = event.target.value;
-    if (breakInputValue < 10) {
-        document.getElementById("textBreakInput").textContent = `0${breakInputValue}`;
-    } else {
-        document.getElementById("textBreakInput").textContent = breakInputValue;
-    }
+    document.getElementById("textBreakInput").textContent = breakInputValue;
     breakTime = breakInputValue;
 });
 
@@ -48,11 +44,7 @@ breakInput.addEventListener("input", (event) => {
 
 workInput.addEventListener("input", (event) => {
     var workInputValue = event.target.value;
-    if (workInputValue < 10) {
-        document.getElementById("textWorkInput").textContent = `0${workInputValue}`;
-    } else {
-        document.getElementById("textWorkInput").textContent = workInputValue;
-    }
+    document.getElementById("textWorkInput").textContent = workInputValue;
     workTime = workInputValue;
     minuts = workInputValue;
     displayTime();
@@ -119,3 +111,4 @@ function decreaseTime() {
 function reset() {
     location.reload();
 }
+
