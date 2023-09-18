@@ -21,8 +21,11 @@ function displayTime(){
 }
 
 function startTimer(){
+    document.getElementById("statut").textContent="Travail";
+    document.getElementById("start").style.display="none";
+    document.getElementById("reset").style.display="unset";
     displayTime();
-    setInterval(decreaseTime,500);
+    setInterval(decreaseTime,1000);
 }
 
 
@@ -33,11 +36,13 @@ function decreaseTime(){
     }else{
         if(minuts-1 == -1){
             if(workBoolean){
+                document.getElementById("statut").textContent="Pause";
                 workBoolean = false;
                 minuts = breakTime;
                 seconds = 0;
                 displayTime();
             }else{
+                document.getElementById("statut").textContent="Travail";
                 workBoolean = true;
                 minuts = workTime;
                 seconds = 0;
