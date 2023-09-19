@@ -22,8 +22,12 @@
         <p id="timer"></p>
     </div>
     <div>
-        <button class="fa-solid fa-play" id="start" onclick="startTimer()"></button>
-        <button class="fa-solid fa-rotate-right" id="reset" onclick="reset()"></button>
+        <button  id="start" title="start" onclick="startTimer()">
+            <em class="fa-solid fa-play"></em>
+        </button>
+        <button id="reset" title="reset" onclick="reset()">
+            <em class="fa-solid fa-rotate-right"></em>
+        </button>
     </div>
     <div>
         <label for="textWorkInput">Work time :<output id="textWorkInput">25</output></label>
