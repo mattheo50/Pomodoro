@@ -77,7 +77,7 @@ function startTimer() {
     document.getElementById("start").style.display = "none";
     document.getElementById("reset").style.display = "unset";
     displayTime();
-    setInterval(decreaseTime, 10);
+    setInterval(decreaseTime, 1000);
 }
 
 //Used to decrease the time from the chrono
