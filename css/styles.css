@@ -3,7 +3,6 @@
 *{
     margin: 0;
     padding: 0;
-
 }
 
 
@@ -11,7 +10,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-
     background-color: #c4041c;
 }
 
@@ -37,8 +35,8 @@ h2 {
     font-size: 75px;
     border: 10px solid beige;
     border-radius: 50%;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     line-height: 400px;
     margin: auto;
     box-shadow: 0px 0px 5px 5px rgb(24, 21, 21);
@@ -69,6 +67,5 @@ h2 {
 footer{
     background-color: black;
     bottom: 0;
-    position: absolute;
     width: 100%;
 }
